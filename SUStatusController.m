@@ -50,6 +50,12 @@
 	[progressBar setUsesThreadedAnimation:YES];
 }
 
+- (void)showWindow:(id)sender
+{
+    [[self window] center];
+    [super showWindow:sender];
+}
+
 - (NSString *)windowTitle
 {
 	return [NSString stringWithFormat:SULocalizedString(@"Updating %@", nil), [host name]];
